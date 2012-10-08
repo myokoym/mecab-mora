@@ -1,1 +1,1 @@
-require 'mecab-syllable/syllable'
+require 'mecab-mora/mora'

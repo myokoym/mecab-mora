@@ -1,14 +1,14 @@
-# MeCab::Syllable
+# MeCab::Mora
 
-日本語の文章を音節で分割して扱うことができます。
+日本語の文章をモーラ（拍）で分割して扱うことができます。
 
-使用例: 俳句や短歌の推敲として、音数を数える
+使用例: 俳句や短歌の推敲として、拍数を数える
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'mecab-syllable'
+    gem 'mecab-mora'
 
 And then execute:
 
@@ -16,20 +16,20 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install mecab-syllable
+    $ gem install mecab-mora
 
 ## Usage
 
 ### source code
 
     require 'MeCab'
-    require 'mecab-syllable'
+    require 'mecab-mora'
 
-    p MeCab::Syllable.new("今日は雨").count  #=> 5
+    p MeCab::Mora.new("今日は雨").count  #=> 5
 
 ### command line
 
-    $ mecab-syllable-count 今日は雨  #=> 5
+    $ mecab-mora-count 今日は雨  #=> 5
 
 ## Contributing
 

@@ -10,33 +10,33 @@ module MeCab
     end
   end
 
-  class Syllable
+  class Mora
     def initialize(text)
-      @syllables = split(text)
+      @moras = split(text)
     end
 
     def count
-      @syllables.flatten.size
+      @moras.flatten.size
     end
 
     private
     def split(text)
       nodes = MeCab::Tagger.new.parseToNode(text)
-      syllables = []
+      moras = []
       nodes.each do |node|
         surface = node.surface
         next if surface.empty?
         kana = node.kana
         if kana
-          syllables << select_syllable(kana)
+          moras << select_mora(kana)
         else
-          syllables << select_syllable(surface)
+          moras << select_mora(surface)
         end
       end
-      syllables
+      moras
     end
 
-    def select_syllable(kana)
+    def select_mora(kana)
       hiragana_to_katakana(kana).gsub(/[^アイウエオカ-モヤユヨラ-ロワヲンヴー]/, "").split(//)
     end
   

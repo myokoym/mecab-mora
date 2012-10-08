@@ -1,8 +1,8 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe MeCab::Syllable do
-  subject { MeCab::Syllable }
+describe MeCab::Mora do
+  subject { MeCab::Mora }
   context "#count" do
     it "めかぶ == 3" do
       subject.new("めかぶ").count.should == 3

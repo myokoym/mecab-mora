@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mecab-syllable/version'
+require 'mecab-mora/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "mecab-syllable"
-  gem.version       = MeCab::Syllable::VERSION
+  gem.name          = "mecab-mora"
+  gem.version       = MeCab::Mora::VERSION
   gem.authors       = ["Masafumi Yokoyama"]
   gem.email         = ["myokoym@gmail.com"]
-  gem.description   = %q{Function addition for mecab-ruby. Supporting syllable parse.}
-  gem.summary       = %q{Syllable parser for mecab-ruby}
-  gem.homepage      = "https://github.com/myokoym/mecab-syllable"
+  gem.description   = %q{Mora parser for mecab-ruby.}
+  gem.summary       = %q{Mora parser for mecab-ruby.}
+  gem.homepage      = "https://github.com/myokoym/mecab-mora"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
